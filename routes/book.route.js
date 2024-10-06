@@ -39,13 +39,14 @@ BookRoute.get("/:id", async (req, res) => {
   }
 });
 
-BookRoute.put("/id", async (req, res) => {
+BookRoute.put("/:id", async (req, res) => {
   const { id } = req.params;
-  const { name, biography, dateOfBirth, nationality } = req.body;
+  const { title, summary, pulicationDate, genres, copiesAvailable } =
+    req.body;
   try {
-    const autbookhor = await Book.findByIdAndUpdate(
+    const book = await Book.findByIdAndUpdate(
       { _id: id },
-      { name, biography, dateOfBirth, nationality }
+      { title, summary, pulicationDate, genres, copiesAvailable }
     );
     res.status(201).json({ book });
   } catch (error) {
@@ -53,11 +54,11 @@ BookRoute.put("/id", async (req, res) => {
   }
 });
 
-BookRoute.delete("/id", async (req, res) => {
+BookRoute.delete("/:id", async (req, res) => {
   const { id } = req.params;
   try {
     const book = await Book.findByIdAndDelete({ _id: id });
-    res.status(201).json({ meassge: "Author delete successfully.." });
+    res.status(201).json({ meassge: "Book delete successfully.." });
   } catch (error) {
     res.status(500).json({ message: "Error delete author" });
   }

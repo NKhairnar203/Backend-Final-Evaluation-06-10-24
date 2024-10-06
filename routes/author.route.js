@@ -36,7 +36,7 @@ AuthorRoute.get("/:id", async (req, res) => {
   }
 });
 
-AuthorRoute.put("/id", async (req, res) => {
+AuthorRoute.put("/:id", async (req, res) => {
   const { id } = req.params;
   const { name, biography, dateOfBirth, nationality } = req.body;
   try {
@@ -50,7 +50,7 @@ AuthorRoute.put("/id", async (req, res) => {
   }
 });
 
-AuthorRoute.delete("/id", async (req, res) => {
+AuthorRoute.delete("/:id", async (req, res) => {
   const { id } = req.params;
   try {
     const author = await Author.findByIdAndDelete({ _id: id });
