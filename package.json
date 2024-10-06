@@ -1,0 +1,28 @@
+{
+  "name": "backend-final-evaluation-06-10-24",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NKhairnar203/Backend-Final-Evaluation-06-10-24.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NKhairnar203/Backend-Final-Evaluation-06-10-24/issues"
+  },
+  "homepage": "https://github.com/NKhairnar203/Backend-Final-Evaluation-06-10-24#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.0",
+    "nodemon": "^3.1.7"
+  }
+}
